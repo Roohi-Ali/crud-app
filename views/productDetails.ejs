@@ -1,0 +1,19 @@
+<p><%= message %></p>
+<h1>Product Details</h1>
+<br>
+<% if (!product) { %>
+   <p> No Product </p>
+<%}else{ %>
+    <p>ID: <%= product.id %></p>
+    <p>Title: <%= product.title %></p>
+    <p>Price: <%= product.price %></p>
+    <p>Description: <%= product.description %></p>
+<% } %>
+
+
+
+<script>
+    setTimeout(() => {
+        window.location.href = '/admin-dashboard';
+    }, 5000);
+</script>

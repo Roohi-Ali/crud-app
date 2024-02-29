@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Welcome <%= name %> to Mobile Shop</h1>
+
+    <div class="container">
+        <form method="get">
+
+            <button type="submit" class="btn btn-dark" formaction="/getAddProduct">Add Product</button>
+            <button type="submit" class="btn btn-dark" formaction="/all">Show All Products</button>
+            <button type="submit" class="btn btn-dark" formaction="/enterProdId">Find Single Product by ID</button>
+            <button type="submit" class="btn btn-dark" formaction="/enterProdId">Delete Product by ID</button>
+            <button type="submit" class="btn btn-dark" formaction="/enterProdId">Update Product by ID</button>
+            <button type="submit" class="btn btn-dark" formaction="/logout?_method=DELETE" formmethod="post">Logout</button>
+
+        
+        </form>
+    </div>
+</body>
+</html>

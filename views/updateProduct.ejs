@@ -1,0 +1,26 @@
+
+
+<p><%= message %></p>
+<h1>Product Details</h1>
+<br>
+
+<br>
+<br>
+<h4>Make changes below</h4>
+<form method="post">
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value = "<%=product.title%>" ><br><br>
+
+    <label for="price">Price:</label>
+    <input type="text" id="price" name="price" value = "<%=product.price%>" ><br><br>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value = "<%=product.description%>" ><br><br>
+
+    <label for="published">Published:</label>
+    <input type="text" id="published" name="published" value = "<%=product.published%>"><br><br>
+
+    <button type="submit" formaction="/edit">Edit</button>
+
+</form>

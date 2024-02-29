@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shop</title>
+</head>
+
+<body>
+    <h1>Welcome <%= name %> to Mobile Shop</h1>
+    <div class="container">
+        <form action="/" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <% if (records.length > 0){ %>
+                    <%   records.forEach((row) => { %>
+                        <tr>
+                            <td><input type="checkbox" name="id" value =<%= row.id %> ></td>
+                            <td><%= row.title %></td>
+                            <td><%=  row.description %></td>
+                            <td><%=  row.price %></td>
+                          </tr>
+                          <% })} else { %>
+                            <tr>
+                              <td colspan="2">No Record Found</td>
+                            </tr>
+                            <%} %>
+            </tbody>
+
+        </table><br><br>
+
+        <!-- <button type="submit" class="btn btn-dark" formaction="/addToCart">Add to Cart</button> -->
+        <br><br>
+        <button type="submit" class="btn btn-dark" formaction="/logout?_method=DELETE">Logout</button>
+        
+    </form>
+    </div>
+
+</body>
+
+</html>
